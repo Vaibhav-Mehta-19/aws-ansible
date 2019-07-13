@@ -5,7 +5,7 @@
   vars_files:
   - aws
 vars:
-  bucketname: asolankibucket
+  bucketname: vaibhav
 tasks:
  - name: Create a S3 bucket
    s3: 
