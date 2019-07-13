@@ -1,0 +1,16 @@
+---
+  - name: ec2 launcher
+    hosts: localhost
+    tasks:
+      - name: ec2 launcher
+        ec2:
+          key_name: Aryan
+          region: ap-south-1
+          instance_type: t2.micro
+          image: ami-5b673c34
+          group: default
+          vpc_subnet_id: subnet-48431f20
+          assign_public_ip: yes
+          count: 1
+          aws_access_key: 
+          aws_secret_key: 
