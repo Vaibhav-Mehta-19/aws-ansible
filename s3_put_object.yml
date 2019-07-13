@@ -1,0 +1,17 @@
+---
+- hosts: localhost
+  gather-facts: no
+  connection: local
+  vars_files:
+  - aws
+vars:
+  bucketname: vaibhav
+tasks:
+ - name: Create a S3 bucket
+   s3: 
+    aws_access_key: "{{ access_key }}"
+    aws_secret_key: "{{ secret_key }}"
+    bucket: "{{ bucketname }}"
+    object: x.txt
+    src: /home/codes/x.txt
+    mode: put
